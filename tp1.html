@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="content">
+        <nav class="nav">
+          <a class="nav-link active" aria-current="page" href="MB-WEB.HTML">MB-Web</a>
+          <a class="nav-link" href="login.html">Home</a>
+          <a class="nav-link" href="#">Travaux Pratique </a>
+          <a class="nav-link" href="rapports.html">Rapports</a>
+          <a class="nav-link" aria-disabled="true" href="aboutus.html">About us</a>
+        </nav>
+        <div class="contenu">
+            <div class="row" justify-content-center>
+            <div class="col-2">
+            <div class="card" style="width:10rem; height: 2cm;">
+            <div class="card-body text-center">
+                <a href="tp1.html">TP n1 </a>
+                <br>
+                <a href="TP N°1 POO.pdf">Tp1 PDF</a>
+            </div>
+            </div>
+            </div>
+            <div class="col-2">
+                <div class="card" style="width:10rem; height: 2cm;">
+                <div class="card-body text-center">
+                    <a href="tp2.html">TP n2</a>
+                    <br>
+                    <a href="TP N°2.pdf">Tp2 PDF</a>
+                </div>
+                </div>
+                </div>
+                <div class="col-2">
+                    <div class="card" style="width:10rem; height: 2cm;">
+                    <div class="card-body text-center">
+                        <a href="tp3.html">TP n3</a>
+                        <br>
+                        <a href="TP 3 POO.pdf">Tp3 PDF</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card" style="width:10rem; height: 2cm;">
+                        <div class="card-body text-center">
+                            <a href="tp4.htm">TP n4 </a>
+                          
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card" style="width:10rem; height: 2cm;">
+                            <div class="card-body text-center">
+                                <a href="tp5.htm">TP n5 </a>
+                                <br>
+                        <a href="TP5 POO.pdf">Tp5 PDF</a>
+
+                            </div>
+                            </div>
+                            </div>
+    
+          
+      </div>
+      </div>
+
+      </div>
+      
+
+
+      <h3 class="ex">Exercice 1:</h3>
+      <div class="pagetp1">
+      <pre>
+              <span id="class">class Personne :</span>
+              population = 0
+              <span id="class">def_init_</span>(self,nom,age,salaire):
+                  self.nom = nom
+                  self.age = age
+                  self.sal = salaire
+                  Personne.population += 1
+              <span id="class">def affiche</span>(self):
+                  print(f"nom:{self.nom}, age:{self.age}, salaire:{self.sal}")
+              @classmethod
+              <span id="class">def nbr_personnes</span>(cls):
+                  return cls.population
+      
+              p1 = <span id="class">Personne</span>("Manal",48,2000)
+              p1.affiche()
+              p2 = <span id="class">Personne</span>("chadi",17,3000)
+              p2.affiche()
+              print(<span id="class">Personne</span>.<span id="class">nbr_Personne</span>())
+          </pre>      
+      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success ms-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Run Code
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Run TP N°1 Ex1</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <pre>
+                  nom: <span id="class">manal
+                  </span>, age:<span id="class">48</span>, salair:<span id="class">2000</span>
+                  nom:<span id="class">chadi</span>, age:<span id="class">17</span>, salaire:<span id="class">3000</span>
+                  <span id="class">2</span>
+              </pre>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--fin Button trigger modal -->
+      <!--fin exercice1-->
+      
+      <!--Exercice 2--> 
+      
+      <h3 class="ex">Exercice 2:</h3>
+      <div class="pagetp1">
+      <pre>
+          <span id="class">class Personne:</span>
+          population=0
+          <span id="class">def _init_</span>(self, nom, age, salaire):
+              self.nom = nom
+              self.age = age
+              self.__salaire = salaire
+              Personne.population+=1
+      
+          <span id="class">def afficher</span>(self):
+              print(f'Nom:{self.nom},Age:{self.age}')
+      
+          <span id="classred">@classmethod</span>
+          <span id="class">def nbr_personnes</span>(cls):
+              print(f'Nomber totale de personnes:{cls.population}')
+      
+          <span id="class">def _getters</span>(self):
+              print(f"Salaire de {self.nom} est {self.__salaire} DH")
+          <span id="class">def _setters</span>(self,n):
+              self.__salaire = int(n)
+      
+          <span id="class">def Augmenter_salaire</span>(self,n):
+              self._salaire = self.salaire + (self._salaire*(n/100))
+      
+          p1 = <span id="class">Personne</span>("khaled",25,6000)
+          p2 = <span id="class">Personne</span>(basma",20,3000)
+          p1.Augmenter_salaire(11)
+          p1._getters()
+          p2._setters(7000)
+          p2.Augmenter_salaire(20)
+          p2._getters()
+       
+      </pre>      
+      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success ms-5" data-bs-toggle="modal" data-bs-target="#exampleModalex2">
+          Run Code
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalex2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Run TP N°1 Ex2</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <pre>
+                  Salaire  <span id="class">khaled</span> est <span id="class">6900 DH</span>
+                  Salaire de <span id="class">basma
+
+                  </span> est <span id="class">3300 Dh</span>
+              </pre>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--fin Button trigger modal -->
+      <!--finex2-->
+      
+      
+      
+      
+      
+      
+      
+      <!--Exercice 3--> 
+      
+      <h3 class="ex">Exercice 3:</h3>
+      <div class="pagetp1">
+      <pre>
+          <span id="class">class Cours(Personne):</span>
+              <span id="class">def _init_</span>(self,nom, professeur, etudiants = None):
+                  self.nom = nom
+                  self.professeur = professeur
+                  self.etudiants = etudiants if not None else []
+              <span id="class">def quitter_cours</span>(self,etudiant):
+                  self.etudiants.remove(etudiant)
+      
+                  
+          prefesseur =<span id="class">Personne</span> ("Ali",22,9000)
+      
+          cour1 = Cours("php", prefesseur, [p1,p2])
+          cour2 = Cours("HTML & CSS", prefesseur, [p1,p2,p3,p4])
+          cour3 = Cours("java script", prefesseur, [p1,p2,p3])
+      
+          cour2.quitter_cours(p1)
+       
+      </pre>      
+      </div>
+      <!--finex3-->
+      
+      
+      <!--Exercice 4--> 
+      
+      <h3 class="ex">Exercice 4:</h3>
+      <div class="pagetp1">
+      <pre>
+          <span id="class"></span>
+          <span id="class">class Cours(Personne):</span>
+          nbr_etudiant = 0
+          population = ""
+          <span id="class">def _init_</span>(self,nom,professeur,etudiants=None):
+              self.nom = nom
+              self.professeur = professeur
+              self.etudiants = etudiants if not None else []
+              if self.etudiants._len_() > Cours.nbr_etudiant:
+                  Cours.nbr_etudiant =  self.etudiants._len_()
+                  Cours.population = self.nom
+      
+          <span id="class">def quitter_cours</span>(self,etudiant):
+              self.etudiants.remove(etudiant)
+      
+          <span id="class">def annocer_cours</span>(self,etudiantAge=19):
+              print(f"Cours : {self.nom}")
+              print("Proffesseur :")
+              self.professeur.afficher()
+              print("Etudiants : ")
+              for etudiant in self.etudiants:
+                  if etudiant.age == etudiantAge:
+                      etudiant.afficher()
+              <span id="class">def imbriquée()</span>:
+                  if self.etudiants._len_() > 10:
+                      print(f"Plus de 10 etudiants")
+                  elif self.etudiants._len_() <  10:
+                      print(f"Moin de 10 etudiants")
+                  else:
+                      print(f"10 etudiants")
+                  moyenneage = 0
+                  for ageEtud in self.etudiants:
+                      moyenneage += ageEtud.age
+                  moyenneage /= self.etudiants._len_()
+                  print(f"Moyenne d'age des etudiants est {moyenneage}")
+              imbriquée()
+          <span id="class">@classmethod</span>
+          <span id="class">def cours_populaire(cls):</span>
+              print(f"Cours avec le plus d'étudiants est {Cours.population} de {Cours.nbr_etudiant} étudiants")
+      
+          prefesseur = Personne("Mr. HAQAY Otmane",45,10000)
+          cour1 = Cours("php", prefesseur, [p1,p2,p3])
+          cour2 = Cours("HTML & CSS", professeur, [p1,p2,p3,p4,p5])
+          cour3 = Cours("java script", professeur, [p1,p2,p3,p4])
+          cour2.quitter_cours(p1)
+          cour1.annocer_cours(26)
+          Cours.cours_populaire()
+          cour2.annocer_cours()
+      </pre>      
+      </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success ms-5" data-bs-toggle="modal" data-bs-target="#exampleModalex4">
+          Run Code
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalex4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Run TP N°1 Ex4</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              <pre>
+                  Cours :<span id="classred">php</span> 
+                  Proffesseur : 
+                  Nom: <span id="class">Mr. HAQAY Otmane, Age: 45</span> 
+                  Etudiants : 
+                  Nom: <span id="class">ali, Age: 22 </span>
+                  Moin de <span id="class">10</span> etudiants
+                  Moyenne : <span id="class">16.6</span>
+                  Cours : <span id="classred">HTML & CSS</span>
+                  Proffesseur :
+                  Nom: <span id="class">HAQAY, Age: 40 </span>
+                  Etudiants :
+                  Nom:<span id="class">ali, Age: 22</span> 
+                  Nom: <span id="class">Safae, Age: 19</span>
+                  Nom: <span id="class">Sami, Age: 20</span>
+                  Moyenne: <span id="class">17.7</span>
+              </pre>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--fin Button trigger modal -->
+      <!--finex4-->
+
+      
+
+
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

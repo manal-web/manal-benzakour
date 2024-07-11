@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="content">
+        <nav class="nav">
+          <a class="nav-link active" aria-current="page" href="MB-WEB.HTML">MB-Web</a>
+          <a class="nav-link" href="login.html">Home</a>
+          <a class="nav-link" href="#">Travaux Pratique </a>
+          <a class="nav-link" href="rapports.html">Rapports</a>
+          <a class="nav-link" aria-disabled="true" href="aboutus.html">About us</a>
+        </nav>
+        <div class="contenu">
+            <div class="row" justify-content-center>
+            <div class="col-2">
+            <div class="card" style="width:10rem; height: 2cm;">
+            <div class="card-body text-center">
+                <a href="tp1.html">TP n1 </a>
+                <br>
+                <a href="TP N°1 POO.pdf">Tp1 PDF</a>
+            </div>
+            </div>
+            </div>
+            <div class="col-2">
+                <div class="card" style="width:10rem; height: 2cm;">
+                <div class="card-body text-center">
+                    <a href="tp2.html">TP n2</a>
+                    <br>
+                    <a href="TP N°2.pdf">Tp2 PDF</a>
+                </div>
+                </div>
+                </div>
+                <div class="col-2">
+                    <div class="card" style="width:10rem; height: 2cm;">
+                    <div class="card-body text-center">
+                        <a href="tp3.html">TP n3</a>
+                        <br>
+                        <a href="TP 3 POO.pdf">Tp3 PDF</a>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card" style="width:10rem; height: 2cm;">
+                        <div class="card-body text-center">
+                            <a href="tp4.htm">TP n4 </a>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card" style="width:10rem; height: 2cm;">
+                            <div class="card-body text-center">
+                                <a href="tp5.htm">TP n5 </a>
+                                <br>
+                                <a href="TP5 POO.pdf">Tp5 PDF</a>
+                            </div>
+                            </div>
+                            </div>
+          
+      </div>
+      </div>
+      
+      </div>
+
+
+      <!--TP1-->
+<h3 class="ex">Exercice 1:</h3>
+<div class="pagetp1">
+<pre>
+    
+    <span id="class"></span>
+    <span id="class">import re:</span>
+    <span id="class">def valideEmail</span>(email):
+        exEmail = r"[a-zA-Z\._+-]+[0-9]*@[a-z]+\.[a-z]+"
+        return re.match(exEmail, email)
+
+    <span id="class">def extractiontélé</span>(chaine):
+        return re.findall(r" [(05|06|07|08|+2125|+2126|+2127|+2128|002125|002126|002127|002128)][0-9]{8,} ", chaine)
+
+    input = "aaitali624@gmail.com"
+    if valideEmail(input):
+        print("valid")
+    else:
+        print('invalid')
+
+    <span id="class">tele</span> = " 0551126554 - 0611764593-0755385201  "
+    print(extractiontélé(<span id="class">tele</span>))
+
+    
+
+</pre>      
+</div>   
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success ms-5" data-bs-toggle="modal" data-bs-target="#exampleModalexjj">
+    Run Code
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalexjj" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Run TP N°1 Ex1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <pre>
+            
+            <span id="classred"></span>valid
+            [' <span id="class">0551126554</span> ', ' <span id="class">0611764593</span> ', ' <span id="class">0755385201</span> ']
+        </pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--fi tp-->
+
+
+<h3 class="ex">Exercice 2:</h3>
+<div class="pagetp1">
+<pre>
+    <span id="class">def remplacerChaine</span>(text):
+    liste = ["abcd", "cccc", "haha", "cr7"]
+    for x in liste:
+        text =  re.sub(r""+x, "", text)
+    return text
+
+    <span id="class">def valideCartCrédit</span>(numéro):
+        return re.match(r"[0-9]{4$}(-| )?[0-9]{4$}(-| )?[0-9]{4$}(-| )?[0-9]{4$}", numéro)
+
+    <span id="class">test</span>= "Lorem ipsum dolor abcd sit amet consectetur adipisicing elit. Voluptatibus repellat exercitationem facere voluptas abcd accusantium cccc 
+    tempora porro vero tenetur culpa? Harum haha abcd commodi repellendus cr7s atque adipisci abcd quisquam maiores tenetur porro! Quasi, deserunt?"
+    <span id="class">NR</span>= "1111 5947 3087 3057"
+
+    print(remplacerChaine(<span id="class">test</span>))
+    if valideCartCrédit(<span id="class">NR</span>):
+        print("valid")
+    else:
+        print('invalid')
+
+</pre>      
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success ms-5" data-bs-toggle="modal" data-bs-target="#exampleModalexvv">
+    Run Code
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalexvv" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Run TP N°1 Ex2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <pre>
+            Lorem ipsum dolor **** sit amet consectetur adipisicing elit. Voluptatibus repellat exercitationem facere voluptas **** accusantium **** tempora porro 
+            vero tenetur culpa? Harum **** **** commodi repellendus **** atque adipisci **** quisquam maiores tenetur porro! Quasi, deserunt?
+            <span id="class">invalid</span>
+        </pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!---------------------------------------t3-->
+<h3 class="ex">Exercice 3:</h3>
+<div class="pagetp1">
+<pre>
+    <span id="class">def test</span>(chaine):
+    return re.findall(r"#(\w+)", chaine)
+
+    print(test(test))
+
+    <span id="class">def valideMotPasse</span>(text):
+        a = re.match(r".[A-Z].", text)
+        b = re.match(r".[a-z].", text)
+        c = re.match(r".[0-9].", text)
+        d = re.match(r".[@ + - ; _ ' / = *].", text)
+        e = re.match(r".{8,}", text)
+        if a and b and c and d and e:
+            return True
+        else:
+            return False
+
+
+    <span id="class">motdepasse</span> = "TG54@3KSIUW_"
+    if valideMotPasse(<span id="class">motdepasse</span>):
+        print("mot de passe force")
+    else:
+        print('mot de passe faible')
+
+    
+
+</pre>      
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success ms-5" data-bs-toggle="modal" data-bs-target="#exampleModalextt">
+    Run Code
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalextt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Run TP N°1 Ex3</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <pre>
+            mot de passe force
+        </pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
